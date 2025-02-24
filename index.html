@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wedding Alan ❤️ Mala</title>
+    <!-- icon -->
+    <link rel="icon" href="assets/img/foto2.jpg">
+    <!-- Boostrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- lightbox2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- CSS -->
+     <link rel="stylesheet" href="assets/css/style.css" class="rel">
+  </head>
+  <body class="over-flow-hidden">
+    <!-- music -->
+     <audio src="assets/audio/beautifull in white.mp3" Loop class="music"></audio>
+    <!-- sfx -->
+    <audio src="assets/audio/dooropened-103851.mp3" class="sound-door"></audio>
+    <!-- section door -->
+     <div id="door-section" class="open" onclick="mulai()">
+      <h1 class="heading-door left huruf-sambung">Alan</h1>
+      <h1 class="heading-door right huruf-sambung">Mala</h1>
+      <div class="doors">
+          <div class="door left">
+            <img src="assets/doors/pintu_kiri.jpg" alt="left door">
+          </div>
+          <div class="door right">
+            <img src="assets/doors/pintu_kanan.jpg" alt="right door">
+          </div>
+      </div>
+    </div>
+
+    <!-- content section -->
+     <div id="content-section">
+      <!-- navbar -->
+       <!-- <ul class="nav">
+        <span class="nav-music"></span>
+        <li>
+          <a href="#acara-section">
+            <i class="fas fa-fw fa-calendar-day"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#lokasi-section">
+            <i class="fas fa-fw fa-location-dot"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#love-story-section">
+            <i class="fas fa-fw fa-heart"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-item-music rotate" id="music-button" onclick="toggleMusic(event)"><i class="fas fa-fw fa-compact-disc"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#gallery-section">
+            <i class="fas fa-fw fa-image"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#gift-section">
+            <i class="fas fa-fw fa-gift"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#rsvp-section">
+            <i class="fas fa-fw fa-check-to-slot"></i>
+          </a>
+        </li>
+       </ul> -->
+
+     <!-- hero section -->
+      <section id="hero-section" class="d-flex align-items-center">
+        <div class="container text-center">
+          <h4 class="my-2 text-white">Kepada <span id="nama-sambutan"></span></h4>
+          <h1 class="my-2 text-white huruf-sambung">Alan & Mala</h1>
+          <h4 class="my-2 text-white">Akan Segera Melangsungkan Pernikahan Pada Tanggal</h4>
+          <h4 class="my-2 text-white fw-bold">Jum'at, 16 Mei 2025</h4>
+          <div class="row my-3 justify-content-center" id="countdown-wedding">
+            <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5> Hari</div></div>
+            <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5> Jam</div></div>
+            <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5> Menit</div></div>
+            <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5> Detik</div></div>
+          </div>
+          <a href="#pembuka-section" class="rounded-pill btn btn-lg btn-get-started py-3"><i class="fas fa-fw fa-envelope-open-text"></i> Buka Undangan</a>
+        </div>
+      </section>
+
+      <!-- pembuka Section -->
+       <section id="pembuka-section" class="pembuka-section section-bg py-5">
+        <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title text-center">
+                <h1 class="text-pink huruf-sambung fw=bold">Assalamu"alaikum</h1>
+                <h3>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h3>
+                <p>Wahai manusia, bertakwalah kepada Tuhanmu yang telah menciptakanmu dari diri yang satu (Adam) dan Dia menciptakan darinya pasangannya (Hawa). Dari keduanya Allah memperkembangbiakkan laki-laki dan perempuan yang banyak.143) Bertakwalah kepada Allah yang dengan nama-Nya kamu saling meminta dan (peliharalah) hubungan kekeluargaan. Sesungguhnya Allah selalu menjaga dan mengawasimu.</p>
+                <p>(QS: An-nisa' (4) : 1)</p>
+              </div>
+
+              <div class="row my-4 justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                  <img src="assets/img/IMG-20250221-WA0009.jpg" alt="wedding" class="img-fluid rounded-pill">
+                </div>
+              </div>
+
+              <div class="row my-3 justify-content-center">
+                <div class="col rouded" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                  <div class="p2 pt-3 text-center">
+                    <h1 class="text-center huruf-sambung">Khairul Alan Almanda</h1>
+                    <p>Putera Ketiga dari Pasangan:</p>
+                    <p>Bpk. Harianto & Ibu Juliati</p>
+                  </div>
+                </div>
+                <div class="col-sm-1 my-auto" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                  <h1 class="text-center huruf-sambung">&</h1>
+                </div>
+                <div class="col rouded" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                  <div class="p2 pt-3 text-center">
+                    <h1 class="text-center huruf-sambung">Nurmala</h1>
+                    <p>Puteri Ketiga dari Pasangan:</p>
+                    <p>Bpk. Harianto & Ibu Juliati</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+
+       <!-- acara section -->
+        <section id="acara-section" class="acara-section py-5">
+          <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="section-title">
+                  <h1 class="text-pink huruf-sambung fw-bold">Acara Pernikahan</h1>
+                  <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do'a restunya, kami ucapkan terima kasih</p>
+                </div>
+                <div class="row justify-content-between px-3 text-center g-4">
+                  <div class="col-lg-6 border my-2 rounded p-3 card-acara" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                    <h4>Akad Nikah</h4>
+                    <hr>
+                    <p><i class="fas fa-fw fa-calendar-day"></i> Jum'at, 16 Mei 2025</p>
+                    <p><i class="fas fa-fw fa-clock"></i> 09:00 WIB - 12:00 WIB</p>
+                    <p><i class="fas fa-fw fa-location-dot"></i> Lokasi di Kediaman Mempelai Wanita</p>
+                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah&details=Akad++Nikah+Alan+%26+Mala&location=Kediaman+Mempelai+Wanita&dates=20250516T020000Z%2F20250516T050000Z" class="btn btn-lg btn-pink rounded-pill" target="_blank">
+                      <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
+                    </a>
+                  </div>
+
+                  <div class="col-lg-6 border my-2 rounded p-3 card-acara" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                    <h4>Resepsi</h4>
+                    <hr>
+                    <p><i class="fas fa-fw fa-calendar-day"></i> Jum'at, 16 Mei 2025</p>
+                    <p><i class="fas fa-fw fa-clock"></i> 14:00 WIB - Selesai WIB</p>
+                    <p><i class="fas fa-fw fa-location-dot"></i> Lokasi di Kediaman Mempelai Wanita</p>
+                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Resepsi&details=Acara+Resepsi+Alan+%26+Mala&location=Kediaman+Mempelai+Wanita&dates=20250516T070000Z%2F20250516T140000Z" class="btn btn-lg btn-pink rounded-pill" target="_blank">
+                      <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Lokasi Section -->
+         <section id="Lokasi-section" class="lokasi-section py-5 section-bg">
+            <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="section-title">
+                    <h1 class="text-pink huruf-sambung fw-bold">Lokasi Akad dan Resepsi Pernikahan</h1>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-lg-12 text-center">
+                    <a href="https://maps.app.goo.gl/T3FNDsoSBzvfsrDv7" target="_blank" class="btn btn-lg btn-pink rounded-pill mb-4"><i class="fas fa-fw fa-location-dot"></i> Buka di Google Maps</a>
+                    <iframe class="mb-4 mb-lg-0 border-pink" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.57792748595!2d101.1235492015329!3d1.2330124801664586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d3630063a1c657%3A0xe1a604b3bf6b9e08!2sSimpang%20Tegar!5e0!3m2!1sid!2sid!4v1740300028212!5m2!1sid!2sid" width="100%" height="250" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+         </section>
+
+         <!-- Story Section -->
+          <section id="love-story-section" class="love-story-section py-5">
+            <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+              <div class="section-title">
+                <h1 class="text-pink huruf-sambung fw-bold">Love Story</h1>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-lg">
+                  <ul class="timeline">
+                    <li data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                      <div class="timeline-badge" style="background-image:url(assets/img/IMG-20250221-WA0008.jpg);">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h3 class="timeline-title">Pertemuan Pertama Alan & Mala</h3>
+                          <span class="timeline-date">12 April 2020</span>
+                        </div>
+                        <div class="timeline-body">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aperiam voluptate recusandae nobis ratione inventore veritatis tenetur ea neque iusto temporibus quo tempora sed distinctio quos similique, in esse labore?</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="timeline-inverted" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                      <div class="timeline-badge" style="background-image:url(assets/img/IMG-20250221-WA0008.jpg);">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h3 class="timeline-title">Pertemanan tumbuh</h3>
+                          <span class="timeline-date">12 April 2021</span>
+                        </div>
+                        <div class="timeline-body">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aperiam voluptate recusandae nobis ratione inventore veritatis tenetur ea neque iusto temporibus quo tempora sed distinctio quos similique, in esse labore?</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                      <div class="timeline-badge" style="background-image:url(assets/img/IMG-20250221-WA0008.jpg);">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h3 class="timeline-title">Tantangan dalam hubungan</h3>
+                          <span class="timeline-date">12 April 2020</span>
+                        </div>
+                        <div class="timeline-body">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aperiam voluptate recusandae nobis ratione inventore veritatis tenetur ea neque iusto temporibus quo tempora sed distinctio quos similique, in esse labore?</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="timeline-inverted" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                      <div class="timeline-badge" style="background-image:url(assets/img/IMG-20250221-WA0008.jpg);">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h3 class="timeline-title">Perjalanan Bersama</h3>
+                          <span class="timeline-date">12 April 2021</span>
+                        </div>
+                        <div class="timeline-body">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aperiam voluptate recusandae nobis ratione inventore veritatis tenetur ea neque iusto temporibus quo tempora sed distinctio quos similique, in esse labore?</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                      <div class="timeline-badge" style="background-image:url(assets/img/IMG-20250221-WA0008.jpg);">
+                      </div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h3 class="timeline-title">Mantap untuk menuju ke jenjang selanjutnya</h3>
+                          <span class="timeline-date">12 April 2020</span>
+                        </div>
+                        <div class="timeline-body">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus aperiam voluptate recusandae nobis ratione inventore veritatis tenetur ea neque iusto temporibus quo tempora sed distinctio quos similique, in esse labore?</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- gallery section -->
+           <section id="gallery-section" class="gallery-section py-5 section-bg">
+            <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+              <div class="section-title">
+                <h1 class="huruf-sambung text-pink fw-bold">Gallery</h1>
+              </div>
+              <div class="row" data-masonry='{"percentPosition": true }'>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="assets/img/foto1.jpg" data-lightbox="alanMala" class="text-decoration-none">
+                    <img src="assets/img/foto2.jpg" alt="Alan & Mala" class="card-img border-pink">
+                  </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="assets/img/foto1.jpg" data-lightbox="alanMala" class="text-decoration-none">
+                    <img src="assets/img/IMG-20250221-WA0007.jpg" alt="Alan & Mala" class="card-img border-pink">
+                  </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="assets/img/foto1.jpg" data-lightbox="alanMala" class="text-decoration-none">
+                    <img src="assets/img/IMG-20250221-WA0008.jpg" alt="Alan & Mala" class="card-img border-pink">
+                  </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="assets/img/foto1.jpg" data-lightbox="alanMala" class="text-decoration-none">
+                    <img src="assets/img/IMG-20250221-WA0009.jpg" alt="Alan & Mala" class="card-img border-pink">
+                  </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="assets/img/foto1.jpg" data-lightbox="alanMala" class="text-decoration-none">
+                    <img src="assets/img/IMG-20250221-WA0010.jpg" alt="Alan & Mala" class="card-img border-pink">
+                  </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="assets/img/foto1.jpg" data-lightbox="alanMala" class="text-decoration-none">
+                    <img src="assets/img/IMG-20250221-WA0011.jpg" alt="Alan & Mala" class="card-img border-pink">
+                  </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="assets/img/foto1.jpg" data-lightbox="alanMala" class="text-decoration-none">
+                    <img src="assets/img/foto2.jpg" alt="Alan & Mala" class="card-img border-pink">
+                  </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="assets/img/foto1.jpg" data-lightbox="alanMala" class="text-decoration-none">
+                    <img src="assets/img/IMG-20250221-WA0012.jpg" alt="Alan & Mala" class="card-img border-pink">
+                  </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <a href="assets/img/foto1.jpg" data-lightbox="alanMala" class="text-decoration-none">
+                    <img src="assets/img/foto2.jpg" alt="Alan & Mala" class="card-img border-pink">
+                  </a>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                  <iframe class="border-pink" width="100%" height="500" src="https://www.youtube.com/embed/aaWrLldCkJI?si=-4Pd2cp_c_znmeLy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+           </section>
+
+           <!-- gift section-->
+            <section id="gift-section" class="gift-section py-5">
+              <div class="container">
+                <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="section-title">
+                    <h1 class="huruf-sambung text-pink fw-bold">Wedding Gift</h1>
+                    <p>Bagi Bapak/ibu/Saudara/i yang ingin mengirimkan hadiah pernikahan dapat melalui virtual account atau e-wallet dibawah ini</p>
+                  </div>
+                  <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                      <button type="button" class="text-center btn btn-lg btn-pink mb-4 rounded-pill" data-bs-toggle="collapse" data-bs-target="#collapseHadiah"><i class="fas fa-fw fa-gift"></i> Kirim Hadiah</button>
+                      <div class="collapse" id="collapseHadiah">
+                        <div class="my-4 mx-auto position-relative credit-card">
+                          <img src="assets/img/logo-atm/logo-bca.jpeg" alt="Logo BCA" class="card-logo">
+                          <div class="card-container">
+                            <img src="assets/img/logo-atm/sim.png" alt="sim" class="card-sim">
+                            <div class="card-number">1234 567 890</div>
+                          </div>
+                          <div class="card-name mt-2">Ari Gunawan</div>
+                          <a style="cursor: pointer;" onclick="copyText(this)" class="copy-button btn btn-light mt-3">
+                            <i class="fas fa-fw fa-copy"></i> Copy
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="my-4 mx-auto position-relative credit-card">
+                        <img src="assets/img/logo-atm/logo-dana.png" alt="Logo Dana" class="card-logo">
+                        <div class="card-container">
+                          <img src="assets/img/logo-atm/sim.png" alt="sim" class="card-sim">
+                          <div class="card-number">0899 6767 0000</div>
+                        </div>
+                        <div class="card-name mt-2">Ari Gunawan</div>
+                        <a style="cursor: pointer;" onclick="copyText(this)" class="copy-button btn btn-light mt-3">
+                          <i class="fas fa-fw fa-copy"></i> Copy
+                        </a>
+                      </div>
+                    </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+            </section>
+
+            <!-- RSVP Section -->
+            <section id="rsvp-section" class="rsvp-section section-bg py-5">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <div class="section-title text-center">
+                      <h1 class="text-pink huruf-sambung fw-bold">RSVP</h1>
+                      <p>Isi form dibawah ini untuk melakukan konfirmasi kehadiran Anda</p>
+                    </div>
+                    <form action="https://script.google.com/macros/s/AKfycbzmUPjbazVwxHrbGc-iXysoWA0DsP0WGFvKkDnIrHJ553otIdZq137MEvf3K276200F/exec" method="POST" id="rsvp-form" class="row row-cols-md-auto g-3 align-items-center justify-content-center">
+                      <div class="col-12">
+                        <div class="mb-3">
+                          <label for="nama">Nama</label>
+                          <input type="text" id="nama" name="nama" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="mb-3">
+                          <label for="jumlah">Jumlah</label>
+                          <Input type="number" id="jumlah" name="jumlah" class="form-control" required min="1" max="5" length="1" value="1"></Input>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="mb-3">
+                          <label for="status">Status</label>
+                          <select name="status" id="status" class="form-select" required>
+                            <option value="0">... Pilih salah satu ...</option>
+                            <option value="Hadir">Hadir</option>
+                            <option value="0">Tidak Hadir</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="mb-3">
+                          <button type="submit" class="btn btn-kirim"><i class="fas fa-fw fa-paper-plane"></i> Kirim</button>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="row mt-5">
+                      <div class="col-lg-12">
+                        <div id="disqus_thread"></div>
+                          <script>
+                              /**
+                              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                              /*
+                              var disqus_config = function () {
+                              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                              };
+                              */
+                              (function() { // DON'T EDIT BELOW THIS LINE
+                              var d = document, s = d.createElement('script');
+                              s.src = 'https://wedding-alan-dan-mala.disqus.com/embed.js';
+                              s.setAttribute('data-timestamp', +new Date());
+                              (d.head || d.body).appendChild(s);
+                              })();
+                          </script>
+                          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- penutup section -->
+             <section id="penutup-section" class="penutup-section py-5">
+              <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <div class="section-title text-center">
+                      <h1 class="text-pink huruf-sambung fw-bold">Wassalamu"alaikum</h1>
+                      <p>Merupakan suatu kebahagiaan dan kehormatan bagi kamu, apabila bapak?ibu/saudara/i, berkenan hadir dan memberikan do'a restu kepada kami.</p>
+                      <h5 class="my-3">KAMI YANG BERBAHAGIA</h5>
+                      <h1 class="huruf-sambung">Alan & Mala</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             </section>
+
+             <footer id="footer" class="mb-5 pb-5">
+              <div class="container py-5 text-center position-relative">
+                <div class="row">
+                  <div class="col-12 my-3">
+                    <a href="Instagram" target="_blank" class="text-decoration-none text-pink fw-bold">&copy; 2025. Made With ❤️ by Fours Corp</a>
+                  </div>
+                  <div class="col-12 my-3">
+                    <a href="#" class="text-pink"><i class="fas fa-fw fa-arrow-up"></i> Back to Top</a>
+                  </div>
+                </div>
+              </div>
+             </footer>
+
+            </div>
+
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- boostrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- lightbox2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js" integrity="sha512-KbRFbjA5bwNan6DvPl1ODUolvTTZ/vckssnFhka5cG80JVa5zSlRPCr055xSgU/q6oMIGhZWLhcbgIC0fyw3RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Sweet Alert -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js
+    "></script>
+    <!-- Masonry -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <!-- JS -->
+     <script src="assets/js/script.js"></script>
+
+     <script id="dsq-count-scr" src="//wedding-alan-dan-mala.disqus.com/count.js" async></script>
+  </body>
+</html>
