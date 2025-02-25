@@ -161,7 +161,7 @@ window.addEventListener("load", function() {
     const action = e.target.action;
     const input = form.querySelectorAll('input, select, button');
     input.forEach(input => {
-      input.disabled = true; // ✅ Perbaikan disini
+      input.disabled = true;
     });
 
     fetch(action, {
@@ -170,7 +170,7 @@ window.addEventListener("load", function() {
     })
     .then(() => {
       Swal.fire({
-        icon: "success", // ✅ Perbaikan disini
+        icon: "success",
         text: "Konfirmasi kehadiran Anda berhasil terkirim!"
       });
     })
@@ -182,8 +182,58 @@ window.addEventListener("load", function() {
     })
     .finally(() => {
       input.forEach(input => {
-        input.disabled = false; // ✅ Perbaikan disini
+        input.disabled = false;
       });
     });
   });
 });
+
+$(document).ready(function() {
+  // Load komentar yang tersimpan
+  loadComments();
+  
+  // Handle form submission
+  $('#commentForm').submit(function(e) {
+      e.preventDefault();
+      const commentText = $('#commentInput').val().trim();
+      
+      if(commentText) {
+          addComment(commentText);
+          $('#commentInput').val(''); // Clear input
+      }
+  });
+});
+
+function addComment(text) {
+  const timestamp = new Date().toLocaleString();
+  const commentHTML = `
+      <div class="comment-item">
+          <p>${text}</p>
+          <small>${timestamp}</small>
+      </div>
+  `;
+  
+  // Simpan ke localStorage
+  saveCommentToStorage({ text, timestamp });
+  
+  // Tampilkan komentar
+  $('#commentsContainer').prepend(commentHTML);
+}
+
+function saveCommentToStorage(comment) {
+  let comments = JSON.parse(localStorage.getItem('invitationComments') || '[]');
+  comments.push(comment);
+  localStorage.setItem('invitationComments', JSON.stringify(comments));
+}
+
+function loadComments() {
+  const comments = JSON.parse(localStorage.getItem('invitationComments') || '[]');
+  comments.forEach(comment => {
+      $('#commentsContainer').prepend(`
+          <div class="comment-item">
+              <p>${comment.text}</p>
+              <small>${comment.timestamp}</small>
+          </div>
+      `);
+  });
+}
