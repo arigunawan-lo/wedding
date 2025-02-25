@@ -28,11 +28,12 @@
   </head>
   <body class="over-flow-hidden">
     <!-- music -->
-     <audio src="assets/audio/beautifull in white.mp3" Loop class="music"></audio>
+    <audio id="wedding-music" src="assets/audio/beautifull in white.mp3" loop class="music"></audio>
+
     <!-- sfx -->
-    <audio src="assets/audio/dooropened-103851.mp3" class="sound-door"></audio>
+    <!-- <audio src="assets/audio/dooropened-103851.mp3" class="sound-door"></audio> -->
     <!-- section door -->
-     <div id="door-section" class="open" onclick="mulai()">
+     <!-- <div id="door-section" class="open" onclick="mulai()">
       <h1 class="heading-door left huruf-sambung">Alan</h1>
       <h1 class="heading-door right huruf-sambung">Mala</h1>
       <div class="doors">
@@ -43,24 +44,40 @@
             <img src="assets/doors/pintu_kanan.jpg" alt="right door">
           </div>
       </div>
-    </div>
+    </div> -->
 
      <!-- hero section -->
-      <section id="hero-section" class="d-flex align-items-center">
-        <div class="container text-center">
-          <h4 class="my-2 text-white">Kepada <span id="nama-sambutan"></span></h4>
-          <h1 class="my-2 text-white huruf-sambung">Alan & Mala</h1>
-          <h4 class="my-2 text-white">Akan Segera Melangsungkan Pernikahan Pada Tanggal</h4>
-          <h4 class="my-2 text-white fw-bold">Jum'at, 16 Mei 2025</h4>
-          <div class="row my-3 justify-content-center" id="countdown-wedding">
-            <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5> Hari</div></div>
-            <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5> Jam</div></div>
-            <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5> Menit</div></div>
-            <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5> Detik</div></div>
+     <section id="hero-section" class="d-flex align-items-center">
+      <div class="container text-center">
+        <h4 class="my-2 text-white">Kepada <span id="nama-sambutan"></span></h4>
+        <h1 class="my-2 text-white huruf-sambung">Alan & Mala</h1>
+        <h4 class="my-2 text-white">Akan Segera Melangsungkan Pernikahan Pada Tanggal</h4>
+        <h4 class="my-2 text-white fw-bold">Jum'at, 16 Mei 2025</h4>
+        <div class="row my-3 justify-content-center" id="countdown-wedding">
+          <div class="col-lg-1 col-3">
+            <div class="text-center p-2 rounded text-light">
+              <h5>0</h5> Hari
+            </div>
           </div>
-          <a href="#pembuka-section" class="rounded-pill btn btn-lg btn-get-started py-3"><i class="fas fa-fw fa-envelope-open-text"></i> Buka Undangan</a>
+          <div class="col-lg-1 col-3">
+            <div class="text-center p-2 rounded text-light">
+              <h5>0</h5> Jam
+            </div>
+          </div>
+          <div class="col-lg-1 col-3">
+            <div class="text-center p-2 rounded text-light">
+              <h5>0</h5> Menit
+            </div>
+          </div>
+          <div class="col-lg-1 col-3">
+            <div class="text-center p-2 rounded text-light">
+              <h5>0</h5> Detik
+            </div>
+          </div>
         </div>
-      </section>
+        <a href="#pembuka-section" class="rounded-pill btn btn-lg btn-get-started py-3" id="play-music-btn"><i class="fas fa-fw fa-envelope-open-text"></i> Buka Undangan</a>
+      </div>
+    </section>
 
       <!-- pembuka Section -->
        <section id="pembuka-section" class="pembuka-section section-bg py-5">
@@ -118,7 +135,7 @@
                     <h4>Akad Nikah</h4>
                     <hr>
                     <p><i class="fas fa-fw fa-calendar-day"></i> Jum'at, 16 Mei 2025</p>
-                    <p><i class="fas fa-fw fa-clock"></i> 09:00 WIB - 12:00 WIB</p>
+                    <p><i class="fas fa-fw fa-clock"></i> 09:30 WIB - 11:00 WIB</p>
                     <p><i class="fas fa-fw fa-location-dot"></i> Lokasi di Kediaman Mempelai Wanita</p>
                     <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Akad+Nikah&details=Akad++Nikah+Alan+%26+Mala&location=Kediaman+Mempelai+Wanita&dates=20250516T020000Z%2F20250516T050000Z" class="btn btn-lg btn-pink rounded-pill" target="_blank">
                       <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
@@ -129,7 +146,7 @@
                     <h4>Resepsi</h4>
                     <hr>
                     <p><i class="fas fa-fw fa-calendar-day"></i> Jum'at, 16 Mei 2025</p>
-                    <p><i class="fas fa-fw fa-clock"></i> 14:00 WIB - Selesai WIB</p>
+                    <p><i class="fas fa-fw fa-clock"></i> 11:00 WIB - Selesai WIB</p>
                     <p><i class="fas fa-fw fa-location-dot"></i> Lokasi di Kediaman Mempelai Wanita</p>
                     <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Resepsi&details=Acara+Resepsi+Alan+%26+Mala&location=Kediaman+Mempelai+Wanita&dates=20250516T070000Z%2F20250516T140000Z" class="btn btn-lg btn-pink rounded-pill" target="_blank">
                       <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
@@ -229,12 +246,12 @@
                       <button type="button" class="text-center btn btn-lg btn-pink mb-4 rounded-pill" data-bs-toggle="collapse" data-bs-target="#collapseHadiah"><i class="fas fa-fw fa-gift"></i> Kirim Hadiah</button>
                       <div class="collapse" id="collapseHadiah">
                         <div class="my-4 mx-auto position-relative credit-card">
-                          <img src="assets/img/logo-atm/logo-bca.jpeg" alt="Logo BCA" class="card-logo">
+                          <img src="assets/img/logo-atm/logo-bri.jpeg" alt="Logo BRI" class="card-logo">
                           <div class="card-container">
                             <img src="assets/img/logo-atm/sim.png" alt="sim" class="card-sim">
-                            <div class="card-number">1234 567 890</div>
+                            <div class="card-number">208701030466503</div>
                           </div>
-                          <div class="card-name mt-2">Ari Gunawan</div>
+                          <div class="card-name mt-2">Khairul Alan Almanda</div>
                           <a style="cursor: pointer;" onclick="copyText(this)" class="copy-button btn btn-light mt-3">
                             <i class="fas fa-fw fa-copy"></i> Copy
                           </a>
@@ -245,9 +262,9 @@
                         <img src="assets/img/logo-atm/logo-dana.png" alt="Logo Dana" class="card-logo">
                         <div class="card-container">
                           <img src="assets/img/logo-atm/sim.png" alt="sim" class="card-sim">
-                          <div class="card-number">0899 6767 0000</div>
+                          <div class="card-number">0822 5218 9131</div>
                         </div>
-                        <div class="card-name mt-2">Ari Gunawan</div>
+                        <div class="card-name mt-2">Khairul Alan Almanda</div>
                         <a style="cursor: pointer;" onclick="copyText(this)" class="copy-button btn btn-light mt-3">
                           <i class="fas fa-fw fa-copy"></i> Copy
                         </a>
@@ -353,7 +370,7 @@
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
     <!-- JS -->
      <script src="assets/js/script.js"></script>
-
-     <script src="assets/js/javascript.js"></script>
+      <script src="assets/js/javascript.js"></script>
+    
   </body>
 </html>

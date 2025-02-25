@@ -10,59 +10,59 @@ if (tempMusic) {
 }
 
 // Door Mulai
-function mulai() {
-    // back to top
-    window.scrollTo(0, 0)
+// function mulai() {
+//     // back to top
+//     window.scrollTo(0, 0)
 
-    // sound door
-    var soundDoor = document.querySelector('.sound-door')
-    soundDoor.play()
+//     // sound door
+//     var soundDoor = document.querySelector('.sound-door')
+//     soundDoor.play()
 
 // door section
-    var doorSection = $('#door-section')
-    var doors = document.querySelectorAll('.door')
-    doors.forEach(function (door, index) {
-        var direction = (index === 0) ? -1 : 1
-        door.style.transform = 'rotateY(' +(79 * direction) + 'deg)'
-    })
+    // var doorSection = $('#door-section')
+    // var doors = document.querySelectorAll('.door')
+    // doors.forEach(function (door, index) {
+    //     var direction = (index === 0) ? -1 : 1
+    //     door.style.transform = 'rotateY(' +(79 * direction) + 'deg)'
+    // })
 
 // set Timeout
-setTimeout(function () {
-    // music play
-    music.play()
-    doorSection.css('transform', 'scale(6)')
-}, 600)
+// setTimeout(function () {
+//     // music play
+//     music.play()
+//     doorSection.css('transform', 'scale(6)')
+// }, 600)
 
-// Set timeout door
-setTimeout(function () {
-    doorSection.css('opacity', 0)
-    $('body').removeClass('overFlow-hidden')
-    $('body').addClass('transition')
-    doorSection.css('display', 'none')
-}, 2000)
-}
+// // Set timeout door
+// setTimeout(function () {
+//     doorSection.css('opacity', 0)
+//     $('body').removeClass('overFlow-hidden')
+//     $('body').addClass('transition')
+//     doorSection.css('display', 'none')
+// }, 2000)
+
 
 // button music
-var isPlaying = true;
+// var isPlaying = true;
 
 
-function toggleMusic(event) {
-  event.preventDefault();
-  const musicButton = document.getElementById('music-button');
+// function toggleMusic(event) {
+//   event.preventDefault();
+//   const musicButton = document.getElementById('music-button');
 
-  if (isPlaying) {
-    musicButton.innerHTML = '<i class="fas fa-fw fa-pause"></i>';
-    musicButton.classList.remove('rotate');
-    musicButton.style.transform = 'translateY(0)'
-    music.pause();
-  } else {
-    musicButton.innerHTML = '<i class="fas fa-fw fa-compact-disc"></i>';
-    musicButton.classList.add('rotate');
-    music.play();
-  }
+//   if (isPlaying) {
+//     musicButton.innerHTML = '<i class="fas fa-fw fa-pause"></i>';
+//     musicButton.classList.remove('rotate');
+//     musicButton.style.transform = 'translateY(0)'
+//     music.pause();
+//   } else {
+//     musicButton.innerHTML = '<i class="fas fa-fw fa-compact-disc"></i>';
+//     musicButton.classList.add('rotate');
+//     music.play();
+//   }
 
-  isPlaying = !isPlaying;
-}
+//   isPlaying = !isPlaying;
+// }
 
 
 // countdown

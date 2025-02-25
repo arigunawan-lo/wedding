@@ -1,3 +1,19 @@
+
+// 
+const music = document.getElementById('wedding-music');
+  const playButton = document.getElementById('play-music-btn');
+  
+  // Fungsi untuk memulai musik ketika tombol diklik
+  playButton.addEventListener('click', function() {
+    music.play();  // Memulai musik
+  });
+
+  // Tambahkan event listener untuk memeriksa ketika musik selesai dan lakukan looping
+  music.addEventListener('ended', function() {
+    music.currentTime = 0; // Mulai dari awal
+    music.play(); // Putar ulang musik
+  });
+
 $(document).ready(function() {
     function displayComments() {
       const comments = JSON.parse(localStorage.getItem('comments')) || [];
@@ -22,7 +38,7 @@ $(document).ready(function() {
       const status = $('#status').val();
       const comment = $('#comment').val().trim();
   
-      if (nama && jumlah && status && comment) {
+      if (nama && status && comment) {
         const comments = JSON.parse(localStorage.getItem('comments')) || [];
         comments.push({ nama, status, comment });
   
