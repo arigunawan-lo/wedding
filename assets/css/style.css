@@ -1,12 +1,12 @@
 :root {
-    --pink: #f14e95;
-    --pink-muted: #fdf4f8;
+    --pink: #41644A;
+    --pink-muted: #A0C878;
     --pink-light: #fcdbe9
     --pink-hover: #d84686;
-    --white: #fff;
-    --grey: #ccc;
-    --light-grey: #d4d4d4;
-    --very-light-grey: #eee;
+    --white: #A0C878;
+    --grey: #A0C878;
+    --light-grey: #3D90D7;
+    --very-light-grey: #A0C878;
     --dark: #151515;
     --black: #000;
 }
@@ -114,7 +114,7 @@ body.transition {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(241, 78, 149, 0.4);
+    background: rgba(43, 217, 40, 0.4);
 }
 
 #hero-section {
@@ -145,7 +145,7 @@ body.transition {
 }
 
 #hero-section .btn-get-started:hover {
-    background: var(--pink-hover);
+    background: var(--pink);
     color: var(--white);
 }
 
@@ -178,7 +178,7 @@ body.transition {
 }
 
 .section-bg {
-    background-color: var(--pink-muted);
+    background-color: var(--pink);
 }
 
 #content-section {
@@ -203,6 +203,7 @@ body.transition {
 
 .card-acara {
     width: calc(50% - 10px);
+    background: var(--pink-muted);
 }
 
 @media(max-width: 992px) {
